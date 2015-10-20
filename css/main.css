@@ -1,0 +1,114 @@
+/******* GENERAL STRUCTURE *******/
+body {
+	margin-top: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+ul {
+	margin-left: 40px;
+}
+
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+/******* FOUNDATION CSS specific *******/
+.container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.small-12 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.title {
+	color: #03AFDA;
+}
+
+div .selected{
+	background-color: #F8E308;
+}
+
+
+
+/******* GAME ITEMS *******/
+
+/* main panel of playground */
+#gameboard {
+	min-height: 400px;
+	width: 100%;
+}
+
+/* div to show ready solition sets */
+#solutions {
+	display: none;
+}
+
+/* div for each individual card */
+.card, .cardSolution {
+	border:1px solid #D6D6D6;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	display:inline-block;
+	height:100px;
+	width:150px;
+	text-align:center;
+	margin:10px;
+	background-color: #FFFBFB;
+}
+
+/* each separate element on the card */
+.cardImage { 
+	width:25px;
+	height:50px;
+	background-size: 25px 50px;
+	margin: 5px;
+	margin-top: 25px;
+	display: inline-block;
+}
+
+
+/* color schemes for cards */
+
+.purpleCard{
+	-webkit-filter: hue-rotate(0deg); 
+	-o-filter: hue-rotate(0deg); 
+	-moz-filter: hue-rotate(0deg); 
+	-ms-filter: hue-rotate(0deg); 
+	filter: hue-rotate(0deg); 			
+}
+.redCard{
+	-webkit-filter: hue-rotate(63deg); 
+	-o-filter: hue-rotate(63deg); 
+	-moz-filter: hue-rotate(63deg); 
+	-ms-filter: hue-rotate(63deg); 
+	filter: hue-rotate(63deg); 
+}
+.greenCard{
+	-webkit-filter: hue-rotate(216deg); 
+	-o-filter: hue-rotate(216deg); 
+	-moz-filter: hue-rotate(216deg); 
+	-ms-filter: hue-rotate(216deg); 
+	filter: hue-rotate(216deg);
+}
+
+/* url of images per card image variation */
+.clear-diamond{background-image: url('../img/diamond-empty.png');}
+.shaded-diamond{background-image: url('../img/diamond-stripe.png');}
+.solid-diamond{background-image: url('../img/diamond-solid.png');}
+.clear-squiggle{background-image: url('../img/squiggle-empty.png');}
+.shaded-squiggle{background-image: url('../img/squiggle-stripe.png');}
+.solid-squiggle{background-image: url('../img/squiggle-solid.png');}
+.clear-oval{background-image: url('../img/oval-empty.png');}
+.shaded-oval{background-image: url('../img/oval-stripe.png');}
+.solid-oval{background-image: url('../img/oval-solid.png');}
+

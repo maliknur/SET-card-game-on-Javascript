@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Malik Nur">
+	<meta name="description" content="Classic SET game">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>SET game on Javascript</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+<body>
+
+	<div class="container">
+		 
+		 <!-- Header -->
+		 <div class="row">
+	        <div class="small-12 columns">
+	          	<h1>
+		          	<strong>
+		          		<span class="title">Set Card Game</span>
+		          	</strong>
+	          	</h1>
+
+	          <hr/>
+	        </div>
+	  	</div>
+	  	<!-- end of Header -->
+
+	<!-- Main body -->
+	<div class="row">
+		
+		<!-- main playground where cards will be generated -->
+		<div class="small-10 columns">
+			<!-- div to display active cards -->
+			<div id="gameboard" class="panel text-center">
+			</div>
+
+			<div class="panel text-center">
+				<button id="checkSet" type="button" class="button expand round">Check Set</button>
+			</div>
+
+			<!-- div to display hint for Sets -->
+			<div id="solutions" class="panel text-center">
+			</div>
+		</div>
+		
+		<!-- side panel for scores, progress and buttons -->
+		<div class="small-2 columns">
+			<div class="row text-center">
+				<!-- display available sets per 12 active cards -->
+				<div id="availableSets"></div>
+				<hr>
+				
+				<!-- Statistics and progress bars -->
+				<div class="circle" id="cardsCircle">
+				</div>
+					<p>Cards left</p>
+					<hr>
+
+				<div class="circle" id="attemptsCircle"></div>
+					<p>Found sets</p>
+					<hr>
+				<div class="circle" id="errorsCircle"></div>
+					<p>Errors</p>
+					<hr>
+				
+				<div class="text-center">
+					<!-- Button to show possible SET solutions -->
+					<input id="cheatMode" class="button small expand radius info" type="button" onclick="show_hide('solutions', 'cheatMode')" value="Show solutions">
+					<!-- Button to reset game and start new session -->
+					<button id="reset" type="button" class="button small expand radius secondary">New Deck</button>
+				
+					<p class="text-center">
+						<a href="http://www.setgame.com/set/puzzle_rules" target="blank">How to play?</a>
+					</p>							
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of Main body -->
+
+	<!-- footer of body -->
+ 	<footer class="row">
+        <div class="small-12 columns">         
+              <h5>
+              	<small>© Malik Nur 2015. All registered trademarks are the property of their respective owners.</small>
+              </h5>
+        </div> 
+    </footer>
+
+	</div>
+	<!-- end of container -->
+
+	<!-- audio effects -->
+	<audio id="click" src="audio/click.wav"></audio>
+	<audio id="applause" src="audio/applause.wav"></audio>
+	<audio id="failure" src="audio/failure.wav"></audio>
+	<audio id="end" src="audio/end.wav" ></audio>
+	<audio id="shuffle_cards" src="audio/shuffle_cards.wav"></audio>
+
+	<!-- JS libraries -->
+	<script src="vendors/jquery-2.1.4.min.js"></script>
+	<script src="vendors/underscore-min.js"></script>	
+	<script src="vendors/circles.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/game.js"></script>
+	<script src="js/helpers.js"></script>
+
+</body>
+</html>
