@@ -6,7 +6,7 @@ All registered trademarks are the property of their respective owners.
 
 
 
-## Rules
+## Rules **[How to play?]**
 ```
 A set consists of three cards which satisfy all of these conditions:
 - They all have the same number, or they have three different numbers;
@@ -14,12 +14,7 @@ A set consists of three cards which satisfy all of these conditions:
 - They all have the same shading, or they have three different shadings;
 - They all have the same color, or they have three different colors;
 
-**[How to play?]**
-
 ```
-
-## Demo
-Here is demo version of the game deployed on Heroku - **[Demo]**
 
 ## Improvement  
 ```
@@ -45,6 +40,5 @@ __Main page with Hints:__
 **[Malik Nur]**  
 
 
-[How to Play?]: http://www.setgame.com/set/puzzle_rules
-[Demo]: http://set-game-js.herokuapp.com/
+[How to play?]: http://www.setgame.com/set/puzzle_rules
 [Malik Nur]: https://github.com/maliknur
