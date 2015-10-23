@@ -158,8 +158,8 @@ function Game(){
 						var result = _.isEqual(_.sortBy(arrayOfCards), _.sortBy(solutionSet));
 						if(result){
 							this.solutions.splice(j,1); 
-							this.addCards();
 							this.removeCards(arrayOfCards);
+							this.addCards();
 							this.showCardsInDeck();
 							this.displayCards();
 							this.solve();
@@ -173,7 +173,7 @@ function Game(){
 			// add three new cards to gameboard
 			this.addCards = function(){
 
-				if(this.activeCards.length >= 3){			
+				if(this.deck.length >= 3){			
 					for(i=0; i<3; ++i){
 						this.activeCards.push(this.deck.splice(0,1)[0]);				
 					}
@@ -188,6 +188,7 @@ function Game(){
     					var obj = this.activeCards[j];
 	    				if(obj.id == id) {
 	        				this.activeCards.splice(j, 1);
+	        				j = this.activeCards.length; // to skip unnecessary iterations
 	    				}
 					}
 				}
