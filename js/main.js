@@ -68,7 +68,8 @@ $(document).ready(function(){
 					 var result = game.checkSet(selectedCards);
 					 
 					 if(result){
-					 	$('#solutions').html("");
+					 	var solutionBoard = document.getElementById('solutions');
+					 	solutionBoard.innerHTML = "";
 					 	game.showSolutions();
 					 	game.counterPossibleSets();
 					 	selectedCards = [];

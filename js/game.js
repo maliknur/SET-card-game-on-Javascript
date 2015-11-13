@@ -46,6 +46,8 @@ function Game(){
 
 			// display card on gameboard
 			this.displayCards = function(){
+				var gameboard = document.getElementById("gameboard");
+				gameboard.innerHTML = ""; 
 
 				for(var i = 0; i < this.activeCards.length; i++){					
 					cardDiv = document.createElement("div");
@@ -157,12 +159,12 @@ function Game(){
 
 						var result = _.isEqual(_.sortBy(arrayOfCards), _.sortBy(solutionSet));
 						if(result){
-							this.solutions.splice(j,1); 
-							this.removeCards(arrayOfCards);
-							this.addCards();
+							this.solutions.splice(j,1); 							
+							this.swapCards(arrayOfCards);
 							this.showCardsInDeck();
 							this.displayCards();
 							this.solve();
+							//this.removeCards(arrayOfCards);
 							return this.applause();
 						}													
 					}
@@ -170,14 +172,26 @@ function Game(){
 			};
 
 
-			// add three new cards to gameboard
-			this.addCards = function(){
+			this.swapCards = function(arr){
 
+
+				var newArr = [];
 				if(this.deck.length >= 3){			
 					for(i=0; i<3; ++i){
-						this.activeCards.push(this.deck.splice(0,1)[0]);				
+						newArr.push(this.deck.splice(0,1)[0]);				
 					}
 				}
+
+				for(var i = 0; i < 3; ++i){
+					for( var j = 0; j< 12; ++j){
+
+							if(this.activeCards[j].id === arr[i]){
+								this.activeCards[j] = newArr[i];
+							}
+						}
+				}
+
+
 			};
 
 			// remove three selected cards if SET complete
